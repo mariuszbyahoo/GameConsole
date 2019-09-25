@@ -26,6 +26,19 @@ namespace GameConsole
             {
                 Console.WriteLine(playerCharacter.DateOfBirth);
             }
+
+            if(playerCharacter.isNoob == null)
+            {
+                Console.WriteLine("Player newbie status is unknown");
+            }
+            else if (playerCharacter.isNoob == true)
+            {
+                Console.WriteLine("Player is a noob");
+            }
+            else
+            {
+                Console.WriteLine("Player is experienced");
+            }
         }
     }
 }

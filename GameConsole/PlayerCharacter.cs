@@ -13,6 +13,8 @@ namespace GameConsole
         public int? DaysSinceLastLogin { get; set; }
         public DateTime? DateOfBirth { get; set; }
 
+        public bool? isNoob { get; set; }
+
         public PlayerCharacter()
         {
             DaysSinceLastLogin = null;

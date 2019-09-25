@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Shorthand for Nullable Value Types
+ * Nullable Boolean values
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
