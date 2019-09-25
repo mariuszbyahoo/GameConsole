@@ -1,6 +1,6 @@
 ﻿using System;
-/* Working with Nullable Value Types and Strings: 
- * Using the Null-Coalescing Operator
+/* Accessing and Checking for Null Values: 
+ * Using the Null-Conditional Operator
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -8,15 +8,17 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
-            var player = new PlayerCharacter();
+            PlayerCharacter player = new PlayerCharacter();
 
-            player.Name = ""; /* "   ", null <- every of theese three values are
-            returning true for the IsNullOrWhiteSpace() method            */
+            //int days = player.DaysSinceLastLogin.Value; // throws InvalidOperationException()
 
-            //player.DaysSinceLastLogin = 42;// <- Uncommenting this line will result in assigning the value to a nullable property
+            int days = player?.DaysSinceLastLogin ?? -1 ; /* This line will return a default value 
+            (in this case: '-1') if the player reverence is set to null, or if the DaysSinceLastLogin
+            member of this reference is set to null also. */
             
+            //player.DaysSinceLastLogin = days;
 
-            PlayerDisplayer.Write(player);
+            Console.WriteLine(days);
 
             Console.ReadLine();
         }
