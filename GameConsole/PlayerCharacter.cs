@@ -10,8 +10,8 @@ namespace GameConsole
         public string Name { get; set; }
         /* DateTime and int are a struckts, ie; value type itself so they cannot 
          be set as a 'null' */
-        public Nullable<int> DaysSinceLastLogin { get; set; }
-        public Nullable<DateTime> DateOfBirth { get; set; }
+        public int? DaysSinceLastLogin { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         public PlayerCharacter()
         {

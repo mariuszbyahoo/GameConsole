@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Refactoring to Nullable<T> and Removing Magic Numbers
+ * Shorthand for Nullable Value Types
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
