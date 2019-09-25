@@ -17,7 +17,12 @@ namespace GameConsole
                 Console.WriteLine(playerCharacter.Name);
             }
 
-            int days = playerCharacter.DaysSinceLastLogin.GetValueOrDefault(); // 0
+            // Conditional Operator -> Wyrażenie Warunkowe.
+            int days = playerCharacter.DaysSinceLastLogin.HasValue ? 
+                playerCharacter.DaysSinceLastLogin.Value : -1; 
+            
+            //int days = playerCharacter.DaysSinceLastLogin.GetValueOrDefault(); // 0
+
 
             Console.WriteLine($"{days} days since last login");
 

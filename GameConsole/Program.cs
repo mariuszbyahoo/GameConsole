@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Using the GetValueOrDefault()  Method
+ * Using the Confitional Operator to Check for Nulls
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
