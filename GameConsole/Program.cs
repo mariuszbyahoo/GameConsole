@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Using the Confitional Operator to Check for Nulls
+ * Using the Null-Coalescing Operator
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -13,8 +13,8 @@ namespace GameConsole
             player.Name = ""; /* "   ", null <- every of theese three values are
             returning true for the IsNullOrWhiteSpace() method            */
 
-            /*player.DaysSinceLastLogin = 42; <- Uncommenting this line will result in assigning the 
-              value 42 to the player.DaysSinceLastLogin member*/
+            //player.DaysSinceLastLogin = 42;// <- Uncommenting this line will result in assigning the value to a nullable property
+            
 
             PlayerDisplayer.Write(player);
 

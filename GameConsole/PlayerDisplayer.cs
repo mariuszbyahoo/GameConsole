@@ -16,11 +16,14 @@ namespace GameConsole
             {
                 Console.WriteLine(playerCharacter.Name);
             }
+            /* Below, a Null-Coalescing operator. Similar to Conditional Operator but it only stores the procedure to run
+               If the referrence on the left hand of double question marks points to a null value.*/
+            int days = playerCharacter.DaysSinceLastLogin ?? -1;
 
             // Conditional Operator -> Wyrażenie Warunkowe.
-            int days = playerCharacter.DaysSinceLastLogin.HasValue ? 
-                playerCharacter.DaysSinceLastLogin.Value : -1; 
-            
+            //int days = playerCharacter.DaysSinceLastLogin.HasValue ? 
+            //playerCharacter.DaysSinceLastLogin.Value : -1; 
+
             //int days = playerCharacter.DaysSinceLastLogin.GetValueOrDefault(); // 0
 
 
