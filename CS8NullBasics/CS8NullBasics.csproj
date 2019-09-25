@@ -4,7 +4,13 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <nullable>enable</nullable> 
-    <!-- This way we can enable non-nullable reference type for an Entire Project -->
+    <!-- This way we can enable non-nullable reference type for an Entire Project,
+    It has been done in the project's properties window in "Build" tab-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
   </PropertyGroup>
 
 </Project>
