@@ -6,19 +6,30 @@ namespace GameConsole
 {
     class PlayerCharacter
     {
-        /*String is a class, so it can points to a null value */
+        private readonly ISpecialDefence _specialDefence;
         public string Name { get; set; }
-        /* DateTime and int are a struckts, ie; value type itself so they cannot 
-         be set as a 'null' */
-        public int? DaysSinceLastLogin { get; set; }
-        public DateTime? DateOfBirth { get; set; }
 
-        public bool? isNoob { get; set; }
+        public int Health { get; set; } = 100;
 
-        public PlayerCharacter()
+        public PlayerCharacter(ISpecialDefence specialDefence)
         {
-            DaysSinceLastLogin = null;
-            DateOfBirth = null;
+            _specialDefence = specialDefence;
+        }
+
+        public void Hit(int damage)
+        {
+            int damageReduction = 0;
+            // Below is the most crucial code for us now:
+            if (_specialDefence != null)
+            {
+                damageReduction = _specialDefence.CalculateDamageReduction(damage);
+            }
+
+            int totalDamageTaken = damage - damageReduction;
+
+            Health -= totalDamageTaken;
+
+            Console.WriteLine($"{Name}'s health has been reduced by {totalDamageTaken} to {Health}.");
         }
     }
 }
