@@ -6,12 +6,12 @@ namespace GameConsole
 {
     class PlayerCharacter
     {
-        private readonly ISpecialDefence _specialDefence;
+        private readonly SpecialDefence _specialDefence;
         public string Name { get; set; }
 
         public int Health { get; set; } = 100;
 
-        public PlayerCharacter(ISpecialDefence specialDefence)
+        public PlayerCharacter(SpecialDefence specialDefence)
         {
             _specialDefence = specialDefence;
         }
