@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Checking for Null or Empty Strings
+ * Using the HasValue and Value Properties
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -12,7 +12,7 @@ namespace GameConsole
 
             player.Name = ""; /* "   ", null <- every of theese three values are
             returning true for the IsNullOrWhiteSpace() method            */
-            player.DaysSinceLastLogin = 42;
+            //player.DaysSinceLastLogin = 42;
             PlayerDisplayer.Write(player);
 
             Console.ReadLine();
