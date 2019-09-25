@@ -1,20 +1,20 @@
-﻿using System;
+﻿
+#nullable enable // This directive is make the whole file of code a "Non-nullable"
+
+using System;
 
 namespace CS8NullBasics
 {/*
     Understanding Non-nullable Reference Types in C# 8: 
-    Enabling Non-nullable Reference Types for Specific Lines of Code     */
+    Enabling Non-nullable Reference Types for an Entire file of Code     */
 
     class Program
     {
         static void Main(string[] args)
         {
-#nullable enable
-            string message = null; /* Surrounding this line with '#nullable' directives will 
-            effectively turn this 'message' variable into a non-nullable reference type, whereas before,
-            it was a nullable reference type.  In C#8 if we will set a nullable variable to a non nullable
-            one we won't get errors, instead, we get warnings. */
 #nullable disable
+            string message = null; // We can opt out the specific lines of code by theese two directives
+#nullable enable
             Console.WriteLine(message);
             Console.WriteLine("Press Enter to exit");
             Console.ReadLine();
