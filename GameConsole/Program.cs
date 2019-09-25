@@ -1,6 +1,6 @@
 ﻿using System;
 /* Eliminating the null Reference Exception: 
- * Example Code Without the Null Object Pattern
+ * Implementing the Null Object Pattern Using Interfaces
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -18,7 +18,7 @@ namespace GameConsole
                 Name = "Amrit"
             };
 
-            PlayerCharacter gentry = new PlayerCharacter(null)
+            PlayerCharacter gentry = new PlayerCharacter(new NullDefence())
             {
                 Name = "Gentry"
             };
