@@ -3,31 +3,25 @@
 namespace CS8NullBasics
 {/*
     Understanding Non-nullable Reference Types in C# 8: 
-    Using the Null-forgiving Operator to Override the Compiler     */
+    Refactoring Existing Code to C# 8     */
 
     class Program
     {
         static void Main(string[] args)
         {
-            Message message = new Message()
+            PlayerCharacter?[] players = new PlayerCharacter[4]
             {
-                Text = null!, // Using the Null-Forgiving operator, in this case it effects the runtime.
-                From = null
+                new PlayerCharacter("Sarah"),
+                new PlayerCharacter ("Gentry"),
+                new PlayerCharacter (null), // name will be default
+                null
             };
 
-            MessagePopulator.Populate(message);
+            PlayerDisplayer.Write(players[0]);
+            PlayerDisplayer.Write(players[1]);
+            PlayerDisplayer.Write(players[2]);
+            PlayerDisplayer.Write(players[3]);
 
-            Console.WriteLine(message.Text);
-            Console.WriteLine(message.From);
-            Console.WriteLine(message.From!.Length); /* Using the Null-Forgiving Operator effects
-            only the compile time, it won't automatically go and add null reference checks into the 
-            compiled program. 
-            If we will comment the Populate() line will make the program generate a NullReferenceException
-            at a runtime. */
-
-            Console.WriteLine(message.ToUpperFrom());
-
-            Console.WriteLine("Press Enter to exit");
             Console.ReadLine();
         }
     }
