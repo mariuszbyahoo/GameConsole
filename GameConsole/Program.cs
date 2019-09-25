@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Using Magic Numbers for Null Value Types 
+ * Refactoring to Nullable<T> and Removing Magic Numbers
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -11,7 +11,7 @@ namespace GameConsole
             var player = new PlayerCharacter();
 
             player.Name = "Sarah";
-            //player.DaysSinceLastLogin = 42;
+            player.DaysSinceLastLogin = 42;
             PlayerDisplayer.Write(player);
 
             Console.ReadLine();

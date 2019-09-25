@@ -9,7 +9,7 @@ namespace GameConsole
         public static void Write(PlayerCharacter playerCharacter)
         {
             Console.WriteLine(playerCharacter.Name);
-            if (playerCharacter.DaysSinceLastLogin == -1)
+            if (playerCharacter.DaysSinceLastLogin == null)
             {
                 Console.WriteLine("No value for DaysSinceLastLogin");
             }
@@ -18,7 +18,7 @@ namespace GameConsole
                 Console.WriteLine(playerCharacter.DaysSinceLastLogin);
             }
 
-            if(playerCharacter.DateOfBirth == DateTime.MinValue)
+            if(playerCharacter.DateOfBirth == null)
             {
                 Console.WriteLine("No date birth specified");
             }
