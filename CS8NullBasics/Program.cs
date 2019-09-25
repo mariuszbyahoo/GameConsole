@@ -3,7 +3,7 @@
 namespace CS8NullBasics
 {/*
     Understanding Non-nullable Reference Types in C# 8: 
-    Working with Nullable and Non-nullable Method Return Values     */
+    Using the Null-coalescing and Null-conditional Operators     */
 
     class Program
     {
@@ -16,7 +16,7 @@ namespace CS8NullBasics
             };
 
             Console.WriteLine(message.Text);
-            Console.WriteLine(message.From);
+            Console.WriteLine(message.From ?? "No from"); // Using Null-Coalescing Operator
             Console.WriteLine(message.ToUpperFrom());
 
             Console.WriteLine("Press Enter to exit");
