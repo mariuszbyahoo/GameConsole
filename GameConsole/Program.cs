@@ -1,6 +1,6 @@
 ﻿using System;
 /* Working with Nullable Value Types and Strings: 
- * Nullable Boolean values
+ * Checking for Null or Empty Strings
  * By J. Roberts Pluralsight*/
 namespace GameConsole
 {
@@ -10,7 +10,8 @@ namespace GameConsole
         {
             var player = new PlayerCharacter();
 
-            player.Name = "Sarah";
+            player.Name = ""; /* "   ", null <- every of theese three values are
+            returning true for the IsNullOrWhiteSpace() method            */
             player.DaysSinceLastLogin = 42;
             PlayerDisplayer.Write(player);
 

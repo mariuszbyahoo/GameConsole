@@ -8,7 +8,14 @@ namespace GameConsole
     {
         public static void Write(PlayerCharacter playerCharacter)
         {
-            Console.WriteLine(playerCharacter.Name);
+            if (string.IsNullOrWhiteSpace(playerCharacter.Name))
+            {
+                Console.WriteLine("Player name is null or all whitespace");
+            }
+            else
+            {
+                Console.WriteLine(playerCharacter.Name);
+            }
             if (playerCharacter.DaysSinceLastLogin == null)
             {
                 Console.WriteLine("No value for DaysSinceLastLogin");
