@@ -3,7 +3,7 @@
 namespace CS8NullBasics
 {/*
     Understanding Non-nullable Reference Types in C# 8: 
-    Working with Nullable and Non-nullable Properties     */
+    Working with Nullable and Non-nullable Method Return Values     */
 
     class Program
     {
